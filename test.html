@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popup Window Example</title>
+<style>
+  /* Styles for the popup */
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 1000; /* Ensure it appears above other content */
+  }
+</style>
+</head>
+<body>
+
+<!-- Button to open the popup -->
+<button onclick="openPopup()">Open Popup</button>
+
+<!-- Popup content -->
+<div id="popup" class="popup">
+  <h2>Popup Content</h2>
+  <p>This is the content of the popup window.</p>
+  <button onclick="closePopup()">Close Popup</button>
+</div>
+
+<script>
+  // JavaScript to handle opening and closing of the popup
+  function openPopup() {
+    document.getElementById("popup").style.display = "block";
+  }
+
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+</script>
+
+</body>
+</html>
